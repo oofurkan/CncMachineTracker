@@ -66,3 +66,4 @@ C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Api\obj\D
 C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Api\obj\Debug\net8.0\CncMachineTracker.Api.pdb
 C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Api\obj\Debug\net8.0\CncMachineTracker.Api.genruntimeconfig.cache
 C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Api\obj\Debug\net8.0\ref\CncMachineTracker.Api.dll
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Api\obj\Debug\net8.0\CncMachineTracker.Api.sourcelink.json
