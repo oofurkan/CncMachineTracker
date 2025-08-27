@@ -1,0 +1,6 @@
+@CncMachineTracker.Api_HostAddress = http://localhost:5150
+
+GET {{CncMachineTracker.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

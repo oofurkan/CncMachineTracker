@@ -1,0 +1,271 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|solutionrelative:cncmachinetracker.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.ui\\cncmachinetracker.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|solutionrelative:cncmachinetracker.ui\\cncmachinetracker.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.ui\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|solutionrelative:cncmachinetracker.ui\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.ui\\data\\weatherforecastservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|solutionrelative:cncmachinetracker.ui\\data\\weatherforecastservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.ui\\data\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|solutionrelative:cncmachinetracker.ui\\data\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.ui\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|solutionrelative:cncmachinetracker.ui\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.ui\\pages\\machinedetail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|solutionrelative:cncmachinetracker.ui\\pages\\machinedetail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.ui\\pages\\machines.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|solutionrelative:cncmachinetracker.ui\\pages\\machines.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.ui\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|solutionrelative:cncmachinetracker.ui\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.ui\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5FAF30-D886-4155-877D-DB2C953BEB1C}|CncMachineTracker.UI\\CncMachineTracker.UI.csproj|solutionrelative:cncmachinetracker.ui\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C62E3A88-A04D-44E2-B8A3-D59B6F3020A9}|CncMachineTracker.Api\\CncMachineTracker.Api.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C62E3A88-A04D-44E2-B8A3-D59B6F3020A9}|CncMachineTracker.Api\\CncMachineTracker.Api.csproj|solutionrelative:cncmachinetracker.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C62E3A88-A04D-44E2-B8A3-D59B6F3020A9}|CncMachineTracker.Api\\CncMachineTracker.Api.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.api\\controllers\\machinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C62E3A88-A04D-44E2-B8A3-D59B6F3020A9}|CncMachineTracker.Api\\CncMachineTracker.Api.csproj|solutionrelative:cncmachinetracker.api\\controllers\\machinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C62E3A88-A04D-44E2-B8A3-D59B6F3020A9}|CncMachineTracker.Api\\CncMachineTracker.Api.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.api\\services\\machineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C62E3A88-A04D-44E2-B8A3-D59B6F3020A9}|CncMachineTracker.Api\\CncMachineTracker.Api.csproj|solutionrelative:cncmachinetracker.api\\services\\machineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C62E3A88-A04D-44E2-B8A3-D59B6F3020A9}|CncMachineTracker.Api\\CncMachineTracker.Api.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.api\\services\\imachineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C62E3A88-A04D-44E2-B8A3-D59B6F3020A9}|CncMachineTracker.Api\\CncMachineTracker.Api.csproj|solutionrelative:cncmachinetracker.api\\services\\imachineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C62E3A88-A04D-44E2-B8A3-D59B6F3020A9}|CncMachineTracker.Api\\CncMachineTracker.Api.csproj|c:\\users\\\u00F6mer furkan\\source\\repos\\cncmachinetracker.api\\cncmachinetracker.api\\models\\machine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C62E3A88-A04D-44E2-B8A3-D59B6F3020A9}|CncMachineTracker.Api\\CncMachineTracker.Api.csproj|solutionrelative:cncmachinetracker.api\\models\\machine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CncMachineTracker.UI",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\CncMachineTracker.UI.csproj",
+              "RelativeDocumentMoniker": "CncMachineTracker.UI\\CncMachineTracker.UI.csproj",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\CncMachineTracker.UI.csproj",
+              "RelativeToolTip": "CncMachineTracker.UI\\CncMachineTracker.UI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-27T15:01:34.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CncMachineTracker.UI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CncMachineTracker.UI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-27T15:01:19.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherForecastService.cs",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Data\\WeatherForecastService.cs",
+              "RelativeDocumentMoniker": "CncMachineTracker.UI\\Data\\WeatherForecastService.cs",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Data\\WeatherForecastService.cs",
+              "RelativeToolTip": "CncMachineTracker.UI\\Data\\WeatherForecastService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T15:01:07.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Data\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "CncMachineTracker.UI\\Data\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Data\\WeatherForecast.cs",
+              "RelativeToolTip": "CncMachineTracker.UI\\Data\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T15:01:04.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "CncMachineTracker.UI\\Pages\\Index.razor",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Pages\\Index.razor",
+              "RelativeToolTip": "CncMachineTracker.UI\\Pages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-27T14:58:00.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MachineDetail.razor",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Pages\\MachineDetail.razor",
+              "RelativeDocumentMoniker": "CncMachineTracker.UI\\Pages\\MachineDetail.razor",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Pages\\MachineDetail.razor",
+              "RelativeToolTip": "CncMachineTracker.UI\\Pages\\MachineDetail.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-27T14:57:52.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Machines.razor",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Pages\\Machines.razor",
+              "RelativeDocumentMoniker": "CncMachineTracker.UI\\Pages\\Machines.razor",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Pages\\Machines.razor",
+              "RelativeToolTip": "CncMachineTracker.UI\\Pages\\Machines.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-27T14:57:07.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "CncMachineTracker.UI\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "CncMachineTracker.UI\\Shared\\NavMenu.razor",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-27T14:56:11.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Program.cs",
+              "RelativeDocumentMoniker": "CncMachineTracker.UI\\Program.cs",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Program.cs",
+              "RelativeToolTip": "CncMachineTracker.UI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T14:51:58.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Services\\ApiClient.cs",
+              "RelativeDocumentMoniker": "CncMachineTracker.UI\\Services\\ApiClient.cs",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.UI\\Services\\ApiClient.cs",
+              "RelativeToolTip": "CncMachineTracker.UI\\Services\\ApiClient.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T14:51:44.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.Api\\Program.cs",
+              "RelativeDocumentMoniker": "CncMachineTracker.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.Api\\Program.cs",
+              "RelativeToolTip": "CncMachineTracker.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T14:47:26.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MachinesController.cs",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.Api\\Controllers\\MachinesController.cs",
+              "RelativeDocumentMoniker": "CncMachineTracker.Api\\Controllers\\MachinesController.cs",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.Api\\Controllers\\MachinesController.cs",
+              "RelativeToolTip": "CncMachineTracker.Api\\Controllers\\MachinesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T14:47:12.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MachineService.cs",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.Api\\Services\\MachineService.cs",
+              "RelativeDocumentMoniker": "CncMachineTracker.Api\\Services\\MachineService.cs",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.Api\\Services\\MachineService.cs",
+              "RelativeToolTip": "CncMachineTracker.Api\\Services\\MachineService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA8wCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T14:46:43.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IMachineService.cs",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.Api\\Services\\IMachineService.cs",
+              "RelativeDocumentMoniker": "CncMachineTracker.Api\\Services\\IMachineService.cs",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.Api\\Services\\IMachineService.cs",
+              "RelativeToolTip": "CncMachineTracker.Api\\Services\\IMachineService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T14:46:27.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Machine.cs",
+              "DocumentMoniker": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.Api\\Models\\Machine.cs",
+              "RelativeDocumentMoniker": "CncMachineTracker.Api\\Models\\Machine.cs",
+              "ToolTip": "C:\\Users\\\u00D6mer Furkan\\source\\repos\\CncMachineTracker.Api\\CncMachineTracker.Api\\Models\\Machine.cs",
+              "RelativeToolTip": "CncMachineTracker.Api\\Models\\Machine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T14:45:31.329Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
