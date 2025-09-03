@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CncMachineTracker.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7338a2f6d798c3d427d171b304e2715a58e39290")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7e3f120afe17909ccc7f7a42aa7bbc7f9821565")]
 [assembly: System.Reflection.AssemblyProductAttribute("CncMachineTracker.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CncMachineTracker.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

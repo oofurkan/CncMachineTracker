@@ -119,9 +119,22 @@ namespace CncMachineTracker.Api.Clean.Controllers
 
         private static MachineDto MapToDto(dynamic machine)
         {
+            // Handle both Machine and MachineSample entities
+            string id;
+            try
+            {
+                // Try to get Id first (for Machine entity)
+                id = machine.Id;
+            }
+            catch
+            {
+                // Fallback to MachineId (for MachineSample entity)
+                id = machine.MachineId;
+            }
+
             return new MachineDto
             {
-                Id = machine.Id,
+                Id = id,
                 Status = GetLocalizedStatus(machine.Status),
                 ProductionCount = machine.ProductionCount,
                 CycleTimeSeconds = machine.CycleTimeSeconds,
