@@ -70,14 +70,14 @@ namespace CncMachineTracker.Infrastructure.Fanuc
                 _logger.LogInformation("Reading current data from FANUC machine {MachineId}", id);
 
                 // Get or create connection handle
-                var handle = await GetOrCreateConnectionAsync(id);
+                var handle = GetOrCreateConnection(id);
                 if (handle == 0)
                 {
                     throw new InvalidOperationException($"Failed to establish connection to machine {id}");
                 }
 
                 // Read machine data
-                var machine = await ReadMachineDataAsync(id, handle);
+                var machine = ReadMachineData(id, handle);
                 
                 _logger.LogInformation("Successfully read data from machine {MachineId}: Status={Status}, Production={ProductionCount}", 
                     id, machine.Status, machine.ProductionCount);
@@ -91,7 +91,7 @@ namespace CncMachineTracker.Infrastructure.Fanuc
             }
         }
 
-        private async Task<ushort> GetOrCreateConnectionAsync(string machineId)
+        private ushort GetOrCreateConnection(string machineId)
         {
             lock (_handleLock)
             {
@@ -113,10 +113,10 @@ namespace CncMachineTracker.Infrastructure.Fanuc
             }
 
             // Create new connection
-            return await CreateNewConnectionAsync(machineId);
+            return CreateNewConnection(machineId);
         }
 
-        private async Task<ushort> CreateNewConnectionAsync(string machineId)
+        private ushort CreateNewConnection(string machineId)
         {
             var machineConfig = GetMachineConfiguration(machineId);
             if (machineConfig == null)
@@ -165,19 +165,19 @@ namespace CncMachineTracker.Infrastructure.Fanuc
             }
         }
 
-        private async Task<Machine> ReadMachineDataAsync(string machineId, ushort handle)
+        private Machine ReadMachineData(string machineId, ushort handle)
         {
             // Read machine status
-            var status = await ReadMachineStatusAsync(handle);
+            var status = ReadMachineStatus(handle);
             
             // Read production count (from macro variable or parameter)
-            var productionCount = await ReadProductionCountAsync(handle);
+            var productionCount = ReadProductionCount(handle);
             
             // Read cycle time (from actual machine data)
-            var cycleTime = await ReadCycleTimeAsync(handle);
+            var cycleTime = ReadCycleTime(handle);
             
             // Read additional machine information
-            var machineInfo = await ReadMachineInfoAsync(handle);
+            var machineInfo = ReadMachineInfo(handle);
 
             return new Machine
             {
@@ -189,7 +189,7 @@ namespace CncMachineTracker.Infrastructure.Fanuc
             };
         }
 
-        private async Task<MachineStatus> ReadMachineStatusAsync(ushort handle)
+        private MachineStatus ReadMachineStatus(ushort handle)
         {
             var result = cnc_statinfo(handle, out ushort status);
             if (result != 0)
@@ -214,7 +214,7 @@ namespace CncMachineTracker.Infrastructure.Fanuc
             };
         }
 
-        private async Task<int> ReadProductionCountAsync(ushort handle)
+        private int ReadProductionCount(ushort handle)
         {
             try
             {
@@ -242,7 +242,7 @@ namespace CncMachineTracker.Infrastructure.Fanuc
             }
         }
 
-        private async Task<double> ReadCycleTimeAsync(ushort handle)
+        private double ReadCycleTime(ushort handle)
         {
             try
             {
@@ -271,7 +271,7 @@ namespace CncMachineTracker.Infrastructure.Fanuc
             }
         }
 
-        private async Task<object> ReadMachineInfoAsync(ushort handle)
+        private object ReadMachineInfo(ushort handle)
         {
             try
             {

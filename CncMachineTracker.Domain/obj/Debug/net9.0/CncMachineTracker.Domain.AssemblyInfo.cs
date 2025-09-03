@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CncMachineTracker.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7e3f120afe17909ccc7f7a42aa7bbc7f9821565")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+053bdb98653048d552be855c956be59e051b41b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("CncMachineTracker.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CncMachineTracker.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
