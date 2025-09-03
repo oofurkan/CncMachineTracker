@@ -1,0 +1,16 @@
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\CncMachineTracker.Application.csproj.AssemblyReference.cache
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\CncMachineTracker.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\CncMachineTracker.Application.AssemblyInfoInputs.cache
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\CncMachineTracker.Application.AssemblyInfo.cs
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\CncMachineTracker.Application.csproj.CoreCompileInputs.cache
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\CncMachineTracker.Application.sourcelink.json
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\bin\Debug\net9.0\CncMachineTracker.Application.deps.json
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\bin\Debug\net9.0\CncMachineTracker.Application.dll
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\bin\Debug\net9.0\CncMachineTracker.Application.pdb
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\bin\Debug\net9.0\CncMachineTracker.Domain.dll
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\bin\Debug\net9.0\CncMachineTracker.Domain.pdb
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\CncMachi.1F6E88EA.Up2Date
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\CncMachineTracker.Application.dll
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\refint\CncMachineTracker.Application.dll
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\CncMachineTracker.Application.pdb
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Application\obj\Debug\net9.0\ref\CncMachineTracker.Application.dll

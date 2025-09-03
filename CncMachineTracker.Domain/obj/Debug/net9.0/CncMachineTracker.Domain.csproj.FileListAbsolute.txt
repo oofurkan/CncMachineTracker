@@ -1,0 +1,12 @@
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\bin\Debug\net9.0\CncMachineTracker.Domain.deps.json
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\bin\Debug\net9.0\CncMachineTracker.Domain.dll
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\bin\Debug\net9.0\CncMachineTracker.Domain.pdb
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\obj\Debug\net9.0\CncMachineTracker.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\obj\Debug\net9.0\CncMachineTracker.Domain.AssemblyInfoInputs.cache
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\obj\Debug\net9.0\CncMachineTracker.Domain.AssemblyInfo.cs
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\obj\Debug\net9.0\CncMachineTracker.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\obj\Debug\net9.0\CncMachineTracker.Domain.sourcelink.json
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\obj\Debug\net9.0\CncMachineTracker.Domain.dll
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\obj\Debug\net9.0\refint\CncMachineTracker.Domain.dll
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\obj\Debug\net9.0\CncMachineTracker.Domain.pdb
+C:\Users\Ömer Furkan\source\repos\CncMachineTracker\CncMachineTracker.Domain\obj\Debug\net9.0\ref\CncMachineTracker.Domain.dll

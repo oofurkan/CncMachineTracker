@@ -1,257 +1,305 @@
-# CNC Machine Tracker Application
+# 🏭 CNC Machine Tracker
 
-A full-stack application for tracking CNC machine status and production data with real-time updates and visualization.
+A modern, clean architecture solution for tracking CNC machine status, production data, and FANUC integration.
 
-## 🚀 Features
+## 🏗️ Architecture Overview
 
-### Backend (.NET Core Web API)
-- **Machine Management**: CRUD operations for CNC machines
-- **Real-time Data**: Simulated machine data with random generation
-- **RESTful API**: Clean, documented endpoints with Swagger
-- **Status Tracking**: Monitor machine status (Çalışıyor, Duruşta, Alarm)
-
-### Frontend (React)
-- **Responsive Design**: Modern UI with Tailwind CSS
-- **Real-time Updates**: Auto-refresh every 5 seconds
-- **Machine List**: Table view with color-coded status indicators
-- **Machine Details**: Detailed view with charts and metrics
-- **Interactive Charts**: Production count visualization using Recharts
-
-## 🛠️ Technologies Used
-
-### Backend
-- **.NET 8** - Latest .NET framework
-- **ASP.NET Core Web API** - RESTful API framework
-- **Swagger/OpenAPI** - API documentation
-- **Dependency Injection** - Clean architecture
-- **CORS** - Cross-origin resource sharing
-
-### Frontend
-- **React 18** - Modern React with hooks
-- **React Router** - Client-side routing
-- **Tailwind CSS** - Utility-first CSS framework
-- **Recharts** - Chart library for data visualization
-- **Fetch API** - HTTP client
-
-## 📋 Prerequisites
-
-- **.NET 8 SDK** - [Download here](https://dotnet.microsoft.com/download/dotnet/8.0)
-- **Node.js 16+** - [Download here](https://nodejs.org/)
-- **npm** or **yarn** - Package managers
-
-## 🚀 Setup Instructions
-
-### 1. Clone the Repository
-```bash
-git clone <repository-url>
-cd CncMachineTracker.Api
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    CncMachineTracker.UI                     │
+│                    (React Frontend)                        │
+└─────────────────────┬───────────────────────────────────────┘
+                      │ HTTP/API Calls
+                      ▼
+┌─────────────────────────────────────────────────────────────┐
+│                CncMachineTracker.Api.Clean                 │
+│                (Web API Layer)                             │
+└─────────────────────┬───────────────────────────────────────┘
+                      │ Dependency Injection
+                      ▼
+┌─────────────────────────────────────────────────────────────┐
+│              CncMachineTracker.Application                 │
+│              (Business Logic Layer)                        │
+│  • MachineService (Simulation & Business Rules)           │
+│  • Ports (IMachineRepository, IFanucClient)               │
+│  • DTOs (MachineDto, MachineHistoryDto)                   │
+└─────────────────────┬───────────────────────────────────────┘
+                      │ Interface Implementation
+                      ▼
+┌─────────────────────────────────────────────────────────────┐
+│             CncMachineTracker.Infrastructure               │
+│             (Data & External Integration)                  │
+│  • InMemoryMachineRepository                               │
+│  • MockFanucClient / FocasFanucClient                     │
+└─────────────────────┬───────────────────────────────────────┘
+                      │ Entity Usage
+                      ▼
+┌─────────────────────────────────────────────────────────────┐
+│               CncMachineTracker.Domain                     │
+│               (Core Entities & Enums)                     │
+│  • Machine, MachineSample, MachineStatus                  │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-### 2. Backend Setup (API)
+## 🚀 Quick Start
 
-#### Navigate to API Project
+### Prerequisites
+- **.NET 9.0 SDK** (latest version)
+- **Node.js 16+** and **npm**
+- **Modern web browser** (Chrome, Firefox, Edge)
+
+### Option 1: Use Start Scripts (Recommended)
+
+#### Windows Batch File
 ```bash
-cd CncMachineTracker.Api
+start-dev.bat
 ```
 
-#### Restore Dependencies
-```bash
-dotnet restore
+#### PowerShell Script
+```powershell
+.\start-dev.ps1
 ```
 
-#### Run the API
+### Option 2: Manual Startup
+
+#### 1. Start the API
 ```bash
+cd CncMachineTracker.Api.Clean
 dotnet run
 ```
+**API will be available at:** http://localhost:5217
+**Swagger UI:** http://localhost:5217/swagger
 
-The API will be available at:
-- **HTTPS**: https://localhost:7000
-- **HTTP**: http://localhost:5000
-- **Swagger UI**: https://localhost:7000/swagger
-
-### 3. Frontend Setup (React)
-
-#### Navigate to UI Project
+#### 2. Start the React Frontend
 ```bash
 cd CncMachineTracker.UI
-```
-
-#### Install Dependencies
-```bash
 npm install
-```
-
-#### Start the React App
-```bash
 npm start
 ```
-
-The React app will be available at:
-- **http://localhost:3000**
-
-## 📡 API Endpoints
-
-### Base URL
-- **Development**: `https://localhost:7000/api`
-
-### Available Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/machines` | Get all machines |
-| `GET` | `/machines/{id}` | Get machine by ID |
-| `POST` | `/machines/simulate` | Generate new simulated machine |
-
-### Machine Model
-```json
-{
-  "id": "string",
-  "status": "Çalışıyor|Duruşta|Alarm",
-  "productionCount": "number",
-  "cycleTime": "number (seconds)",
-  "timestamp": "datetime"
-}
-```
-
-## 🎨 UI Features
-
-### Machine List View
-- **Status Indicators**: Color-coded badges
-  - 🟢 Green: Çalışıyor (Working)
-  - 🟡 Yellow: Duruşta (Stopped)
-  - 🔴 Red: Alarm
-- **Auto-refresh**: Updates every 5 seconds
-- **Simulate Button**: Generate new test machines
-
-### Machine Detail View
-- **Detailed Information**: All machine properties
-- **Status Summary**: Working status, production rate, efficiency
-- **Production Chart**: Line chart showing production count over time
-- **Real-time Updates**: Auto-refresh with latest data
+**Frontend will be available at:** http://localhost:3000
 
 ## 🔧 Configuration
 
-### Environment Variables
-
-#### Frontend (.env)
-Create a `.env` file in the `CncMachineTracker.UI` directory:
-```env
-REACT_APP_API_URL=https://localhost:7000/api
-```
-
-#### Backend (appsettings.json)
+### API Configuration (`appsettings.json`)
 ```json
 {
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  },
-  "AllowedHosts": "*"
+  "UseFanuc": false,           // Enable real FANUC integration
+  "HistoryWindowMinutes": 10   // History retention window
 }
 ```
 
-## 🏗️ Project Structure
+### Frontend Configuration
+- **API Port:** Automatically configured to use port 5217
+- **Proxy:** Set to http://localhost:5217 for development
+- **Environment Variables:** Set `REACT_APP_API_URL` to override API URL
 
-```
-CncMachineTracker.Api/
-├── Controllers/
-│   └── MachinesController.cs
-├── Models/
-│   └── Machine.cs
-├── Services/
-│   ├── IMachineService.cs
-│   └── MachineService.cs
-├── Program.cs
-└── appsettings.json
+## 📊 API Endpoints
 
-CncMachineTracker.UI/
-├── src/
-│   ├── components/
-│   │   ├── MachineList.js
-│   │   ├── MachineDetail.js
-│   │   └── Navbar.js
-│   ├── services/
-│   │   └── api.js
-│   ├── App.js
-│   └── index.js
-├── public/
-│   └── index.html
-└── package.json
-```
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/machines` | Get all machines current snapshots |
+| `GET` | `/api/machines/{id}` | Get latest snapshot for specific machine |
+| `GET` | `/api/machines/{id}/history?minutes=10` | Get machine history (last N minutes) |
+| `POST` | `/api/machines/{id}/simulate` | Simulate realistic state changes |
+| `POST` | `/api/machines/{id}/refresh` | Refresh from FANUC (when enabled) |
 
-## 🚀 Development
+### Example API Calls
 
-### Running Both Applications
-
-1. **Terminal 1** - Start the API:
+#### Simulate Machine M001
 ```bash
-cd CncMachineTracker.Api
-dotnet run
+curl -X POST "http://localhost:5217/api/machines/M001/simulate"
 ```
 
-2. **Terminal 2** - Start the React app:
+#### Get Machine History
 ```bash
-cd CncMachineTracker.UI
-npm start
+curl "http://localhost:5217/api/machines/M001/history?minutes=15"
 ```
 
-### Building for Production
-
-#### Backend
+#### Get All Machines
 ```bash
-cd CncMachineTracker.Api
-dotnet publish -c Release
+curl "http://localhost:5217/api/machines"
 ```
 
-#### Frontend
+## 🎮 Frontend Features
+
+### Machine List View
+- **Real-time Updates:** Auto-refresh every 5 seconds
+- **Individual Simulation:** Simulate specific machines
+- **New Machine Creation:** Generate new machines with sequential IDs
+- **Status Indicators:** Visual status with colors and icons
+
+### Machine Detail View
+- **Live Data:** Real-time machine status and metrics
+- **History Charts:** Production count over time visualization
+- **History Table:** Detailed historical data view
+- **Action Buttons:** Simulate and refresh functionality
+- **Responsive Design:** Works on desktop and mobile
+
+### Data Visualization
+- **Production Charts:** Line charts showing production trends
+- **Status Tracking:** Real-time status monitoring
+- **Performance Metrics:** Cycle time and efficiency calculations
+
+## 🧪 Testing
+
+### Run All Tests
 ```bash
-cd CncMachineTracker.UI
-npm run build
+dotnet test CncMachineTracker.Clean.sln
 ```
 
-## 🔍 Testing
+### Test Coverage
+- ✅ **22/22 tests passing**
+- ✅ **Unit Tests:** Business logic, repository operations
+- ✅ **Integration Tests:** API endpoints, end-to-end workflows
+- ✅ **Simulation Tests:** State machine behavior validation
 
-### API Testing
-- Use Swagger UI at `https://localhost:7000/swagger`
-- Test endpoints directly in the browser
-- Use tools like Postman or curl
+## 🔌 FANUC Integration
 
-### Frontend Testing
+### Current Status
+- **Mock Implementation:** ✅ Ready for development/testing
+- **Real Integration:** 🔧 Scaffold ready for FOCAS library
+
+### Enable Real FANUC Integration
+
+1. **Install FANUC FOCAS Library**
+   - Download Focas1.dll and Focas2.dll
+   - Place in project's lib folder
+
+2. **Update Configuration**
+   ```json
+   {
+     "UseFanuc": true
+   }
+   ```
+
+3. **Implement FOCAS Calls**
+   - Edit `FocasFanucClient.cs`
+   - Add P/Invoke declarations
+   - Implement connection management
+
+### FOCAS Function Examples
+```csharp
+// Connect to machine
+cnc_allclibhndl3(ip, port, user, pass, out handle);
+
+// Get status information
+cnc_statinfo(handle, out status);
+
+// Read parameters
+cnc_rdparam(handle, param, axis, out value);
+
+// Cleanup
+cnc_freelibhndl(handle);
+```
+
+## 🎯 Realistic Simulation Features
+
+### State Machine Rules
+- **Per-machine baselines** for consistent behavior
+- **Markov chain transitions** with realistic probabilities
+- **Production count progression** based on status
+- **Cycle time stability** with ±10% noise
+
+### Simulation Logic
+```csharp
+// Status transition probabilities
+Running → Running: 80%
+Running → Stopped: 15%
+Running → Alarm: 5%
+
+// Production count changes
+Running: +1 to +5 parts
+Stopped: +0 (or rarely +1)
+Alarm: +0
+
+// Cycle time simulation
+Base cycle time ± 10% noise
+Clamped between 10-120 seconds
+```
+
+## 🚀 Development Workflow
+
+### 1. **Start Development Environment**
 ```bash
+.\start-dev.ps1
+```
+
+### 2. **Make Changes**
+- Edit API code in `CncMachineTracker.Api.Clean`
+- Edit business logic in `CncMachineTracker.Application`
+- Edit UI components in `CncMachineTracker.UI`
+
+### 3. **Test Changes**
+```bash
+# Test API
+dotnet test CncMachineTracker.Tests
+
+# Test UI (in separate terminal)
 cd CncMachineTracker.UI
 npm test
 ```
 
-## 🐛 Troubleshooting
+### 4. **Build & Deploy**
+```bash
+# Build API
+dotnet build CncMachineTracker.Api.Clean
+
+# Build UI
+cd CncMachineTracker.UI
+npm run build
+```
+
+## 📁 Project Structure
+
+```
+CncMachineTracker/
+├── CncMachineTracker.Domain/           # Core entities & enums
+├── CncMachineTracker.Application/      # Business logic & ports
+├── CncMachineTracker.Infrastructure/   # Data & external adapters
+├── CncMachineTracker.Api.Clean/        # Web API layer
+├── CncMachineTracker.UI/               # React frontend
+├── CncMachineTracker.Tests/            # Test suite
+├── start-dev.bat                       # Windows startup script
+├── start-dev.ps1                       # PowerShell startup script
+└── README.md                           # This file
+```
+
+## 🔍 Troubleshooting
 
 ### Common Issues
 
-1. **CORS Errors**
-   - Ensure the API is running on port 7000
-   - Check that CORS is properly configured in Program.cs
+#### API Not Starting
+- Check .NET 9.0 SDK installation: `dotnet --version`
+- Verify port 5217 is not in use
+- Check build errors: `dotnet build`
 
-2. **Port Conflicts**
-   - API: Change ports in `Properties/launchSettings.json`
-   - React: Change port in `package.json` or use `PORT=3001 npm start`
+#### Frontend Not Connecting
+- Verify API is running on port 5217
+- Check browser console for CORS errors
+- Verify proxy setting in package.json
 
-3. **SSL Certificate Issues**
-   - For development, accept the self-signed certificate
-   - Or use HTTP endpoints for testing
+#### Tests Failing
+- Ensure all NuGet packages are restored
+- Check .NET version compatibility
+- Run tests individually to isolate issues
 
-## 📝 License
-
-This project is licensed under the MIT License.
+### Port Configuration
+- **API:** http://localhost:5217
+- **Frontend:** http://localhost:3000
+- **Swagger:** http://localhost:5217/swagger
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+1. **Fork the repository**
+2. **Create feature branch:** `git checkout -b feature/amazing-feature`
+3. **Commit changes:** `git commit -m 'Add amazing feature'`
+4. **Push to branch:** `git push origin feature/amazing-feature`
+5. **Open Pull Request**
 
-## 📞 Support
+## 📄 License
 
-For questions or issues, please create an issue in the repository.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+**Built with ❤️ using .NET 9 and Clean Architecture principles**

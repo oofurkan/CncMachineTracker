@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "bzOnSYLP8Qk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Api.Clean\\CncMachineTracker.Api.Clean.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.8\\microsoft.extensions.configuration.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.8\\microsoft.extensions.configuration.abstractions.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.configuration.binder\\9.0.8\\microsoft.extensions.configuration.binder.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.8\\microsoft.extensions.dependencyinjection.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.8\\microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.diagnostics\\9.0.8\\microsoft.extensions.diagnostics.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\9.0.8\\microsoft.extensions.diagnostics.abstractions.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.http\\9.0.8\\microsoft.extensions.http.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.logging\\9.0.8\\microsoft.extensions.logging.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.8\\microsoft.extensions.logging.abstractions.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.options\\9.0.8\\microsoft.extensions.options.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\9.0.8\\microsoft.extensions.options.configurationextensions.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.8\\microsoft.extensions.primitives.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.openapi\\1.6.25\\microsoft.openapi.1.6.25.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\swashbuckle.aspnetcore\\9.0.4\\swashbuckle.aspnetcore.9.0.4.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.4\\swashbuckle.aspnetcore.swagger.9.0.4.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.4\\swashbuckle.aspnetcore.swaggergen.9.0.4.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.4\\swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

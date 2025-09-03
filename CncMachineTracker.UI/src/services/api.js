@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5217/api';
 
 class ApiService {
   async getMachines() {
@@ -27,9 +27,22 @@ class ApiService {
     }
   }
 
-  async simulateMachine() {
+  async getMachineHistory(id, minutes = 10) {
     try {
-      const response = await fetch(`${API_BASE_URL}/machines/simulate`, {
+      const response = await fetch(`${API_BASE_URL}/machines/${id}/history?minutes=${minutes}`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return await response.json();
+    } catch (error) {
+      console.error(`Error fetching machine ${id} history:`, error);
+      throw error;
+    }
+  }
+
+  async simulateMachine(id) {
+    try {
+      const response = await fetch(`${API_BASE_URL}/machines/${id}/simulate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,7 +53,25 @@ class ApiService {
       }
       return await response.json();
     } catch (error) {
-      console.error('Error simulating machine:', error);
+      console.error(`Error simulating machine ${id}:`, error);
+      throw error;
+    }
+  }
+
+  async refreshMachine(id) {
+    try {
+      const response = await fetch(`${API_BASE_URL}/machines/${id}/refresh`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return await response.json();
+    } catch (error) {
+      console.error(`Error refreshing machine ${id}:`, error);
       throw error;
     }
   }

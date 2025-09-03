@@ -6,6 +6,7 @@ const MachineList = () => {
   const [machines, setMachines] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [simulating, setSimulating] = useState(false);
 
   const fetchMachines = async () => {
     try {
@@ -21,13 +22,38 @@ const MachineList = () => {
     }
   };
 
-  const handleSimulate = async () => {
+  const handleSimulate = async (machineId) => {
     try {
-      const newMachine = await apiService.simulateMachine();
-      setMachines(prev => [...prev, newMachine]);
+      setSimulating(true);
+      const updatedMachine = await apiService.simulateMachine(machineId);
+      
+      // Update the machine in the list
+      setMachines(prev => prev.map(m => 
+        m.id === machineId ? updatedMachine : m
+      ));
+      
+      setError(null);
     } catch (err) {
-      setError('Failed to simulate machine');
+      setError(`Failed to simulate machine ${machineId}`);
       console.error(err);
+    } finally {
+      setSimulating(false);
+    }
+  };
+
+  const handleSimulateNew = async () => {
+    try {
+      setSimulating(true);
+      // Simulate a new machine with ID M001, M002, etc.
+      const newId = `M${String(machines.length + 1).padStart(3, '0')}`;
+      const newMachine = await apiService.simulateMachine(newId);
+      setMachines(prev => [...prev, newMachine]);
+      setError(null);
+    } catch (err) {
+      setError('Failed to simulate new machine');
+      console.error(err);
+    } finally {
+      setSimulating(false);
     }
   };
 
@@ -45,7 +71,7 @@ const MachineList = () => {
       case 'Çalışıyor':
         return 'bg-green-100 text-green-800 border-green-200';
       case 'Duruşta':
-        return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+        return 'bg-yellow-100 text-yellow-800 border-green-200';
       case 'Alarm':
         return 'bg-red-100 text-red-800 border-red-200';
       default:
@@ -79,10 +105,11 @@ const MachineList = () => {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold text-gray-900">CNC Machines</h1>
         <button
-          onClick={handleSimulate}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+          onClick={handleSimulateNew}
+          disabled={simulating}
+          className="bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 px-4 rounded-lg transition-colors"
         >
-          Simulate New Machine
+          {simulating ? 'Simulating...' : 'Simulate New Machine'}
         </button>
       </div>
 
@@ -132,12 +159,19 @@ const MachineList = () => {
                     {machine.productionCount}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {machine.cycleTime}
+                    {machine.cycleTimeSeconds}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {new Date(machine.timestamp).toLocaleString()}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
+                    <button
+                      onClick={() => handleSimulate(machine.id)}
+                      disabled={simulating}
+                      className="text-green-600 hover:text-green-900 disabled:text-gray-400"
+                    >
+                      {simulating ? 'Simulating...' : 'Simulate'}
+                    </button>
                     <Link
                       to={`/machine/${machine.id}`}
                       className="text-blue-600 hover:text-blue-900"

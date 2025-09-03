@@ -6,23 +6,17 @@ import apiService from '../services/api';
 const MachineDetail = () => {
   const { id } = useParams();
   const [machine, setMachine] = useState(null);
+  const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [chartData, setChartData] = useState([]);
+  const [simulating, setSimulating] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
 
   const fetchMachine = async () => {
     try {
       setLoading(true);
       const data = await apiService.getMachineById(id);
       setMachine(data);
-      
-      // Generate mock chart data for demonstration
-      const mockData = Array.from({ length: 10 }, (_, index) => ({
-        time: `${index * 10}:00`,
-        productionCount: Math.floor(Math.random() * 100) + data.productionCount - 50
-      }));
-      setChartData(mockData);
-      
       setError(null);
     } catch (err) {
       setError('Failed to fetch machine details');
@@ -32,11 +26,61 @@ const MachineDetail = () => {
     }
   };
 
+  const fetchHistory = async () => {
+    try {
+      const data = await apiService.getMachineHistory(id, 15); // Last 15 minutes
+      setHistory(data.samples || []);
+    } catch (err) {
+      console.error('Failed to fetch history:', err);
+      // Don't set error for history, just log it
+    }
+  };
+
+  const handleSimulate = async () => {
+    try {
+      setSimulating(true);
+      const updatedMachine = await apiService.simulateMachine(id);
+      setMachine(updatedMachine);
+      
+      // Refresh history after simulation
+      await fetchHistory();
+      
+      setError(null);
+    } catch (err) {
+      setError('Failed to simulate machine');
+      console.error(err);
+    } finally {
+      setSimulating(false);
+    }
+  };
+
+  const handleRefresh = async () => {
+    try {
+      setRefreshing(true);
+      const updatedMachine = await apiService.refreshMachine(id);
+      setMachine(updatedMachine);
+      
+      // Refresh history after refresh
+      await fetchHistory();
+      
+      setError(null);
+    } catch (err) {
+      setError('Failed to refresh machine data');
+      console.error(err);
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
   useEffect(() => {
     fetchMachine();
+    fetchHistory();
     
     // Auto-refresh every 5 seconds
-    const interval = setInterval(fetchMachine, 5000);
+    const interval = setInterval(() => {
+      fetchMachine();
+      fetchHistory();
+    }, 5000);
     
     return () => clearInterval(interval);
   }, [id]);
@@ -66,6 +110,13 @@ const MachineDetail = () => {
         return '❓';
     }
   };
+
+  // Prepare chart data from real history
+  const chartData = history.map(sample => ({
+    time: new Date(sample.timestamp).toLocaleTimeString(),
+    productionCount: sample.productionCount,
+    cycleTime: sample.cycleTimeSeconds
+  })).reverse(); // Show newest data on the right
 
   if (loading) {
     return (
@@ -107,14 +158,33 @@ const MachineDetail = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center space-x-4">
-        <Link
-          to="/"
-          className="text-blue-600 hover:text-blue-900"
-        >
-          ← Back to Machine List
-        </Link>
-        <h1 className="text-3xl font-bold text-gray-900">Machine {machine.id}</h1>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-4">
+          <Link
+            to="/"
+            className="text-blue-600 hover:text-blue-900"
+          >
+            ← Back to Machine List
+          </Link>
+          <h1 className="text-3xl font-bold text-gray-900">Machine {machine.id}</h1>
+        </div>
+        
+        <div className="flex space-x-2">
+          <button
+            onClick={handleSimulate}
+            disabled={simulating}
+            className="bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+          >
+            {simulating ? 'Simulating...' : 'Simulate'}
+          </button>
+          <button
+            onClick={handleRefresh}
+            disabled={refreshing}
+            className="bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+          >
+            {refreshing ? 'Refreshing...' : 'Refresh'}
+          </button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -142,7 +212,7 @@ const MachineDetail = () => {
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">Cycle Time:</span>
-              <span className="font-medium">{machine.cycleTime} seconds</span>
+              <span className="font-medium">{machine.cycleTimeSeconds} seconds</span>
             </div>
             
             <div className="flex justify-between items-center">
@@ -173,7 +243,7 @@ const MachineDetail = () => {
                 <span className="text-gray-700">Production Rate</span>
               </div>
               <span className="font-medium text-gray-900">
-                {machine.cycleTime > 0 ? Math.round(3600 / machine.cycleTime) : 0} parts/hour
+                {machine.cycleTimeSeconds > 0 ? Math.round(3600 / machine.cycleTimeSeconds) : 0} parts/hour
               </span>
             </div>
             
@@ -192,26 +262,72 @@ const MachineDetail = () => {
 
       {/* Production Chart */}
       <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Production Count Over Time</h2>
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Production Count Over Time (Last 15 minutes)</h2>
         
-        <div className="h-64">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={chartData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="time" />
-              <YAxis />
-              <Tooltip />
-              <Line 
-                type="monotone" 
-                dataKey="productionCount" 
-                stroke="#3B82F6" 
-                strokeWidth={2}
-                dot={{ fill: '#3B82F6', strokeWidth: 2, r: 4 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
+        {chartData.length > 0 ? (
+          <div className="h-64">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={chartData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="time" />
+                <YAxis />
+                <Tooltip />
+                <Line 
+                  type="monotone" 
+                  dataKey="productionCount" 
+                  stroke="#3B82F6" 
+                  strokeWidth={2}
+                  dot={{ fill: '#3B82F6', strokeWidth: 2, r: 4 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        ) : (
+          <div className="h-64 flex items-center justify-center text-gray-500">
+            No history data available yet. Try simulating the machine to generate data.
+          </div>
+        )}
       </div>
+
+      {/* History Table */}
+      {history.length > 0 && (
+        <div className="bg-white shadow-md rounded-lg p-6">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Recent History</h2>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Time</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Production Count</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cycle Time (s)</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {history.map((sample, index) => (
+                  <tr key={index} className="hover:bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {new Date(sample.timestamp).toLocaleString()}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getStatusColor(sample.status)}`}>
+                        {getStatusIcon(sample.status)} {sample.status}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                      {sample.productionCount}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                      {sample.cycleTimeSeconds}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

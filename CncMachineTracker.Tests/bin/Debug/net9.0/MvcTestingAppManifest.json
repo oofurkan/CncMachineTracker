@@ -1,0 +1,6 @@
+{
+  "CncMachineTracker.Api.Clean, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Api.Clean",
+  "CncMachineTracker.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Application",
+  "CncMachineTracker.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Domain",
+  "CncMachineTracker.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Infrastructure"
+}

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "COvTqWh1dzE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Application\\CncMachineTracker.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\Ömer Furkan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.8\\microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

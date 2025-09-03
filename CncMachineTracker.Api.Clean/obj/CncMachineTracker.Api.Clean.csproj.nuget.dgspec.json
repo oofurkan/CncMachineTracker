@@ -1,0 +1,315 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Api.Clean\\CncMachineTracker.Api.Clean.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Api.Clean\\CncMachineTracker.Api.Clean.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Api.Clean\\CncMachineTracker.Api.Clean.csproj",
+        "projectName": "CncMachineTracker.Api.Clean",
+        "projectPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Api.Clean\\CncMachineTracker.Api.Clean.csproj",
+        "packagesPath": "C:\\Users\\Ömer Furkan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Api.Clean\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ömer Furkan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Application\\CncMachineTracker.Application.csproj": {
+                "projectPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Application\\CncMachineTracker.Application.csproj"
+              },
+              "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Infrastructure\\CncMachineTracker.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Infrastructure\\CncMachineTracker.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Application\\CncMachineTracker.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Application\\CncMachineTracker.Application.csproj",
+        "projectName": "CncMachineTracker.Application",
+        "projectPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Application\\CncMachineTracker.Application.csproj",
+        "packagesPath": "C:\\Users\\Ömer Furkan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ömer Furkan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Domain\\CncMachineTracker.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Domain\\CncMachineTracker.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Domain\\CncMachineTracker.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Domain\\CncMachineTracker.Domain.csproj",
+        "projectName": "CncMachineTracker.Domain",
+        "projectPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Domain\\CncMachineTracker.Domain.csproj",
+        "packagesPath": "C:\\Users\\Ömer Furkan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ömer Furkan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Infrastructure\\CncMachineTracker.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Infrastructure\\CncMachineTracker.Infrastructure.csproj",
+        "projectName": "CncMachineTracker.Infrastructure",
+        "projectPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Infrastructure\\CncMachineTracker.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Ömer Furkan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ömer Furkan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Application\\CncMachineTracker.Application.csproj": {
+                "projectPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Application\\CncMachineTracker.Application.csproj"
+              },
+              "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Domain\\CncMachineTracker.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ömer Furkan\\source\\repos\\CncMachineTracker\\CncMachineTracker.Domain\\CncMachineTracker.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

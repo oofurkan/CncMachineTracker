@@ -8,18 +8,18 @@ call npm install
 
 echo.
 echo 🔧 Building API...
-cd ..\CncMachineTracker.Api
+cd ..\CncMachineTracker.Api.Clean
 call dotnet build
 
 echo.
 echo 🎯 Starting applications...
-echo API will be available at: https://localhost:7000
+echo API will be available at: http://localhost:5217
 echo React app will be available at: http://localhost:3000
-echo Swagger UI will be available at: https://localhost:7000/swagger
+echo Swagger UI will be available at: http://localhost:5217/swagger
 
 echo.
 echo ⏳ Starting API...
-start "API" cmd /k "cd CncMachineTracker.Api && dotnet run"
+start "API" cmd /k "cd CncMachineTracker.Api.Clean && dotnet run"
 
 echo ⏳ Starting React app...
 start "React" cmd /k "cd CncMachineTracker.UI && npm start"
